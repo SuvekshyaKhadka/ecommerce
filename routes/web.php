@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\productController;
 use Inertia\Inertia;
 
 // Route::get('/', function () {
@@ -16,3 +18,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
+
+Route::get('/login',function(){
+    return view('login');
+});
+
+Route::post("/login", [UserController::class,'login']);
+Route::post("/", [productController::class,'index']);
