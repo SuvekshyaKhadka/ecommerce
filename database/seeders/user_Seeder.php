@@ -19,7 +19,6 @@ class user_Seeder extends Seeder
         'name'=>'Suvekshya Khadka',
         "email"=>'subi@gmail.com',
         "password"=>Hash::make('1234')
-
        ]);
     }
 }

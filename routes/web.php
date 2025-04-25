@@ -19,9 +19,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
 
-Route::get('/login',function(){
+Route::get('/login', function(){
     return view('login');
 });
 
 Route::post("/login", [UserController::class,'login']);
-Route::post("/", [productController::class,'index']);
+Route::get("/", [productController::class,'index']);
