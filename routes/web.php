@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\productController;
 use Illuminate\Auth\Events\Login;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 
