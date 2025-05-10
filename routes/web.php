@@ -34,4 +34,6 @@ Route::post("/login", [UserController::class,'login']);           //Handles a PO
 Route::get("/", [productController::class,'index']);              //Serves the homepage (/)using index method in productcontroller
 Route::get("detail/{id}", [productController::class,'detail']);   //dynamic routing for product detail / loads the detail method of productController with specific product id.
 Route::get("search", [productController::class,'search']);       //route handles a get request to /search and triggers the search method in the productController
-Route::post("add_to_cart", [productController::class,'addToCart']);       //route handles a get request to /search and triggers the search method in the productController
+Route::post("add_to_cart", [productController::class,'addToCart']);       //route handles the post request to /add to cart and call attoCart in productController.
+Route::get("cartlist", [productController::class,'cartList']);       //route handles the get request to /cartlist and calls cartList in productController.
+Route::get("removecart/{id}", [productController::class,'removeCart']);       //route handles the get request to /removelist and calls cartlist in productController.
